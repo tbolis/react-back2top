@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "noEmit": true,
-    "paths": {"react-back2top": ["../packages/react-back2top/src/index.ts"]}
+    "paths": {"react-back2top": ["../react-back2top/src/index.ts"]}
   },
   "include": ["."]
 }

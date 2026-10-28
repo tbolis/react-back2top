@@ -60,7 +60,7 @@ The animation is skipped when the user prefers reduced motion.
 
 ## Development
 
-This is a Yarn workspaces monorepo: the component lives in `packages/react-back2top`, the demo app in `showcase`.
+This is a Yarn workspaces monorepo: the component lives in `packages/react-back2top`, the demo app in `packages/showcase`.
 
 ```sh
 yarn install

@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "scripts": {
     "start": "vite",
-    "build": "vite build --outDir ../dist-showcase --emptyOutDir",
+    "build": "vite build --outDir ../../dist-showcase --emptyOutDir",
     "typecheck": "tsc --noEmit",
-    "clean": "rimraf ../dist-showcase"
+    "clean": "rimraf ../../dist-showcase"
   },
   "dependencies": {
     "react": "^19.3.1",

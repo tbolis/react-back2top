@@ -7,6 +7,6 @@ export default defineConfig({
     plugins: [react()],
     resolve: {
         // use the component sources directly, no build needed while developing
-        alias: {'react-back2top': fileURLToPath(new URL('../packages/react-back2top/src/index.ts', import.meta.url))}
+        alias: {'react-back2top': fileURLToPath(new URL('../react-back2top/src/index.ts', import.meta.url))}
     }
 });
