@@ -36,12 +36,13 @@ Any other anchor attributes (`aria-label`, `style`, `data-*`, ...) are passed th
 
 ##  Example
 
-The examples are served with Vite:
+The `showcase` workspace of the repository is a Vite app with several configurations:
 
 ```sh
 git clone https://github.com/tbolis/react-back2top.git
-npm install
-npm start
+cd react-back2top
+yarn install
+yarn start
 ```
 
 ##  Properties
@@ -59,11 +60,16 @@ The animation is skipped when the user prefers reduced motion.
 
 ## Development
 
+This is a Yarn workspaces monorepo: the component lives in `packages/react-back2top`, the demo app in `showcase`.
+
 ```sh
-npm test               # run tests
-npm run test:coverage  # with coverage
-npm run lint
-npm run build
+yarn install
+yarn start             # run the showcase
+yarn test              # run tests
+yarn test:coverage     # with coverage
+yarn typecheck
+yarn lint
+yarn build             # build the component into packages/react-back2top/lib
 ```
 
 ## Issues
@@ -72,7 +78,7 @@ See https://github.com/tbolis/react-back2top/issues
 
 ## Changelog
 
-See https://github.com/tbolis/react-back2top/blob/master/CHANGELOG.md
+See https://github.com/tbolis/react-back2top/blob/master/packages/react-back2top/CHANGELOG.md
 
 ##  License
 

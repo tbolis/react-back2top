@@ -11,6 +11,6 @@
   * `style` is merged and other anchor attributes are forwarded
   * ESM and CommonJS builds, React `^16.8 || ^17 || ^18 || ^19` supported
   * Tests moved to Vitest and Testing Library with full coverage, Karma/Webpack/Babel removed
-  * Examples rebuilt with Vite
+  * Examples rebuilt with Vite as the `showcase` workspace; repository converted to Yarn workspaces
   * Requires Node 20+ for development
 * **0.1.0** Initial release

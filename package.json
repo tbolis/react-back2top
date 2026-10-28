@@ -1,79 +1,34 @@
 {
-  "name": "react-back2top",
+  "name": "react-back2top-workspace",
+  "private": true,
   "version": "1.0.0",
-  "description": "A React component for Back-To-Top button/link functionality",
-  "keywords": [
-    "back",
-    "top",
-    "react",
-    "back-to-top",
-    "back2top",
-    "back-2-top",
-    "button"
-  ],
-  "homepage": "https://github.com/tbolis/react-back2top",
-  "bugs": "https://github.com/tbolis/react-back2top/issues",
-  "author": {
-    "name": "Thomas Bolis",
-    "email": "thomas.bolis@gmail.com"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tbolis/react-back2top.git"
-  },
-  "sideEffects": false,
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./lib/esm/index.d.ts",
-      "import": "./lib/esm/index.js",
-      "require": "./lib/cjs/index.js"
-    }
-  },
-  "files": [
-    "lib"
+  "workspaces": [
+    "packages/*",
+    "showcase"
   ],
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "clean": "rimraf lib coverage dist-examples",
-    "build": "node scripts/build.mjs",
-    "build:examples": "vite build examples --outDir ../dist-examples --emptyOutDir",
-    "typecheck": "tsc --noEmit",
+    "start": "yarn workspace react-back2top-showcase start",
+    "build": "yarn workspace react-back2top build",
+    "build:showcase": "yarn workspace react-back2top-showcase build",
+    "typecheck": "yarn workspaces run typecheck",
     "lint": "eslint .",
-    "start": "vite examples",
-    "test": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "prepublishOnly": "npm run typecheck && npm run lint && npm run test:coverage && npm run build"
-  },
-  "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+    "test": "yarn workspace react-back2top test",
+    "test:coverage": "yarn workspace react-back2top test:coverage",
+    "clean": "yarn workspaces run clean"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@testing-library/dom": "^10.4.2",
-    "@testing-library/jest-dom": "^7.0.1",
-    "@testing-library/react": "^16.3.3",
-    "@testing-library/user-event": "^14.6.8",
     "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "@vitejs/plugin-react": "^6.1.2",
-    "@vitest/coverage-v8": "^5.0.5",
     "eslint": "^10.13.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "globals": "^17.13.0",
-    "jsdom": "^30.1.3",
-    "react": "^19.3.1",
-    "react-dom": "^19.3.1",
     "rimraf": "^6.1.3",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.72.1",
-    "vite": "^8.3.5",
-    "vitest": "^5.0.5"
+    "typescript": "^6",
+    "typescript-eslint": "^8.72.1"
   }
 }

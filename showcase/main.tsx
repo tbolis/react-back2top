@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {createRoot} from 'react-dom/client';
-import Back2Top from '../src';
+import Back2Top from 'react-back2top';
 
 import './styles.css';
 
