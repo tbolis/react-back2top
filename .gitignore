@@ -44,7 +44,6 @@ build/
 dist/
 lib/
 
-yarn.lock
 
 ### OSX template
 .DS_Store
@@ -140,3 +139,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+dist-showcase/
+.yarn/
